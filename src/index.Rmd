@@ -24,6 +24,14 @@ Tämän kurssin tarkoituksena on oppia käsittelemään dataa QGISillä tehokkaa
 Kurssilla käydään läpi keinoja virheiden välttämiseen ja tehokkaampaan editointiin.
 Tavoitteena on saada kaikki irti QGISin ominaisuuksista erityisesti datan tuottamisen näkökulmasta.
 
+## Kurssimateriaalien lataaminen
+
+Voit ladata harjoituksissa käytettävän kurssihakemiston tästä linkistä:
+
+::: note-box
+[Kurssihakemisto.zip](https://drive.google.com/uc?id=1xBgD0GDEC1oi21jm_I3BNGNvBFV808f7&export=download)
+:::
+
 ## Lukuohje
 
 **Web-selaimessa** suoritettavat komennot on merkitty seuraavasti:
