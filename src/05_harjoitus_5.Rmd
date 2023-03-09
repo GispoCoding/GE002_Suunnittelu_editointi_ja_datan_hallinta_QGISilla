@@ -42,7 +42,7 @@ Gispon kehittämä **DigiTransit.fi Geocoder -lisäosa** hyödyntää mm. HSL:n 
 
 ![](img/harjoitus_5/image4.png)
 
-Asentamisen jälkeen **Digitransit.fi-dialogi-ikkuna** aukeaa **Lisäosat-valikosta**. Huomaa, että ikkunassa on enemmän asetuksia, mutta edelleen voit hakea vain yhden osoitteen kerrallaan. Syötä sama osoite kuin edellistä lisäosaa testatessasi.  Tämäkin lisäosa luo löytämistään osoitteista uuden tilapäisen tason. Millaisia tuloksia löydät nyt?
+Asentamisen jälkeen **Digitransit.fi-dialogi-ikkuna** aukeaa **Lisäosat-valikosta**. Huomaa, että ikkunassa on enemmän asetuksia, mutta edelleen voit hakea vain yhden osoitteen kerrallaan. Syötä sama osoite kuin edellistä lisäosaa testatessasi. Tämäkin lisäosa luo löytämistään osoitteista uuden tilapäisen tason. Millaisia tuloksia löydät nyt?
 
 ![](img/harjoitus_5/image5.png)
 
