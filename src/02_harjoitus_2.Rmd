@@ -54,7 +54,7 @@ Tallenna tästä syntyvä taso Aluesuunnitelma-GeoPackageen nimellä **"Rakennus
 
 ## **Kohteiden editoiminen alkuperäisessä tiedostossa**
 
-Aiemmin QGIS loi usein uuden tason, kun sille tehtiin jokin geoprosessoinnin operaatio. Lopputuloksena saattoi olla projekti, joka oli täynnä väliaikaisia tasoja. Uutena ominaisuutena QGIS mahdollistaa nykyään  **Muokkaa ominaisuuksia suoraan -toiminnon (**engl**.**  **In-Place Editing)**, jonka avulla voidaan esimerkiksi pehmentää tason geometriaa tekemättä siitä uutta tasoa.  Muutokset siis tehdään suoraan lähtötasoon.
+Aiemmin QGIS loi usein uuden tason, kun sille tehtiin jokin geoprosessoinnin operaatio. Lopputuloksena saattoi olla projekti, joka oli täynnä väliaikaisia tasoja. Uutena ominaisuutena QGIS mahdollistaa nykyään **Muokkaa ominaisuuksia suoraan -toiminnon (**engl**.** **In-Place Editing)**, jonka avulla voidaan esimerkiksi pehmentää tason geometriaa tekemättä siitä uutta tasoa. Muutokset siis tehdään suoraan lähtötasoon.
 
 ![](img/harjoitus_2/image8.png)
 
