@@ -177,7 +177,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <h2><span class="header-section-number">4.4</span> <strong>Relaatioiden sisäiset säännöt</strong></h2>
 <p>Asetetaan nyt säännöt, jonka mukaan relaatiot riippuvat lomakkeen täytössä tehdyistä valinnoista. Mene uudestaan tason <strong>Attribuuttilomakkeeseen</strong> ja valitsemaasi tason ominaisuuskenttään (Taso_1, Taso_2 tai Taso_3). SyötäTaso_2 -kentän <strong>Suodatinlauseke-kenttään</strong> seuraava lauseke:</p>
 <div class="code-box">
-<p>left(“koodi”,1)=current_value(‘Taso_1’)</p>
+<p>left("koodi",1)=current_value('Taso_1')</p>
 </div>
 <p><img src="img/harjoitus_3/image17.png" /></p>
 <p>Käytännössä tämä määrittää rajoituksen, jonka mukaan lomakkeella näytetään ainoastaan sellaisia kohteita, joiden koodi vastaa ylemmän tason määritystä. Tee samalla logiikalla määritykset tasolle 3, mutta muuta lausekkeen numerot 1 numeroiksi 2. Mene nyt <strong>Loppi_ruudukko-tasolle</strong> ja yritä luoda kokonaan uusi geometria. Jos määritykset toimivat, editointi ei anna nyt käyttäjän syöttää vääriä tietoja!</p>
@@ -190,7 +190,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <p>Asetetaan nyt oletusarvot siten, että käyttäjän valitessa suoraan sopivan maankäyttöluokan tasolla 3, tasojen 1 ja 2 arvot täydentyvät automaattisesti vastaaviksi. Huomaa, että jos käytät oletusarvoja, edellisessä tehtävässä tehdyt suodatuslausekeet eivät toimi yhtäaikaisesti oletusarvojen kanssa. Ne on siis ensin poistettava.</p>
 <p>Tasolla 3 ei anneta mitään suodatuslauseketta eikä myöskään oletusarvoa. Tasolle 2 asetetaan oletusarvo-kohtaan lauseke siten, että se poimii Taso_3-kentän nykyisestä arvosta kaksi vasemmanpuoleisinta merkkiä ja kirjoittaa saamansa tuloksen Taso_2 -kenttään.</p>
 <div class="code-box">
-<p>left(attribute($currentfeature, ‘Taso_3’),2)</p>
+<p>left(attribute($currentfeature, 'Taso_3'),2)</p>
 </div>
 <p>Ruksi myös <strong>Käytä oletusarvoa päivityksessä</strong> -kohta.</p>
 <p>Vastaavasti Taso_1:n oletusarvoksi asetetaan yhden vasemmanpuoleisimman merkin poiminta Taso_3-kentästä.</p>
