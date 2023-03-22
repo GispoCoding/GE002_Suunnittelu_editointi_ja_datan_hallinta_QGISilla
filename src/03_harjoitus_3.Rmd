@@ -14,7 +14,7 @@ Harjoituksen jälkeen osallistuja osaa hyödyntää tehokkaasti QGISin Attribute
 
 ## **Valmistautuminen**
 
-Avaa uusi QGIS-projekti (**Projekti \> Uusi**) ja tallenna se nimellä \"**QGIS-harjoitus 3**\". Lisää projektiin seuraavat aineistot:
+Avaa uusi QGIS-projekti (**Projekti \> Uusi**) ja tallenna se nimellä "**QGIS-harjoitus 3**". Lisää projektiin seuraavat aineistot:
 
 -   **OpenStreetMap**
 
@@ -48,19 +48,17 @@ Valitse **Ruudukon laajuus -kohdassa ... \> Valitse laajuus piirtoalueelta**, jo
 
 Jätä **tyhjäksi tallennussijainti** kohta, jolloin tiedosto tallentuu väliaikaiseksi tiedostoksi nimellä **Ruudukko**. Kun klikkaat **Suorita**, QGIS luo heksagoniruudukon valitsemallesi alueelle.
 
-![](img/harjoitus_3/image5.png)
-Kun ruudukko on luotu, valikoimme siitä vain Loppi-polygonin kohdalle osuvat ruudut. Tämä tehdään **Prosessointityökalut-paneelista Vektoritiedosta poiminta \> Irrota sijainnin perusteella -työkalulla**. Valitse Irrota tasolta kohtaan äsken luotu väliaikainen-tasosta **Ruudukko** ja valitse ne kohteet, jotka leikkaavat. Valitse tallennussijainniksi **Loppi.gpkg** ja anna tason nimeksi **Loppi_ruudukko** ja klikkaa **Suorita**.
+![](img/harjoitus_3/image5.png) Kun ruudukko on luotu, valikoimme siitä vain Loppi-polygonin kohdalle osuvat ruudut. Tämä tehdään **Prosessointityökalut-paneelista Vektoritiedosta poiminta \> Irrota sijainnin perusteella -työkalulla**. Valitse *Irrota tasolta...* kohtaan äsken luotu väliaikainen-taso **Ruudukko** ja valitse ne kohteet, jotka leikkaavat. Valitse tallennussijainniksi **Loppi.gpkg** ja anna tason nimeksi **Loppi_ruudukko** ja klikkaa **Suorita**.
 
 ![](img/harjoitus_3/image6.png)
 
-
 ![](img/harjoitus_3/image9.png)
 
-Seuraavaksi lisäämme tasoon uudet attribuuttitietokentät, jotka kertovat kyseisen tason maankäytöstä. Seuraamme luokituksessa SLICES-luokitusta, jonka luemme toisesta taulusta. Luokittelu on kolmiportainen, joten ensimmäisenä luomme ominaisuustietokentän nimeltä **\"Taso_1\"** **Loppi_ruudukko-tason** attribuuttitauluun. Avaa ruudukko-tason attribuuttitaulu klikkaamalla **Avaa attribuuttitaulu -kuvaketta** ![](img/harjoitus_3/image10.png) **Ominaisuustietojen työkalupalkista** tai klikkaamalla tasoa hiiren oikealla painikkeella ja valitsemalla **Avaa attribuuttitaulu**. Luo uusi kenttä klikkaamalla **Uusi kenttä -kuvaketta** ![](img/harjoitus_3/image11.png) attribuuttitaulussa.
+Seuraavaksi lisäämme tasoon uudet attribuuttitietokentät, jotka kertovat kyseisen tason maankäytöstä. Seuraamme luokituksessa SLICES-luokitusta, jonka luemme toisesta taulusta. Luokittelu on kolmiportainen, joten ensimmäisenä luomme ominaisuustietokentän nimeltä **"Taso_1"** **Loppi_ruudukko-tason** attribuuttitauluun. Avaa ruudukko-tason attribuuttitaulu klikkaamalla **Avaa attribuuttitaulu -kuvaketta** ![](img/harjoitus_3/image10.png) **Ominaisuustietojen työkalupalkista** tai klikkaamalla tasoa hiiren oikealla painikkeella ja valitsemalla **Avaa attribuuttitaulu**. Luo uusi kenttä klikkaamalla **Uusi kenttä -kuvaketta** ![](img/harjoitus_3/image11.png) attribuuttitaulussa.
 
 ![](img/harjoitus_3/image12.png)
 
-Lisää samalla tavalla myös kentät \"Taso_2\" ja \"Taso_3\". Nyt sinulla on suunnitelman pohja valmiina.
+Lisää samalla tavalla myös kentät "Taso_2" ja "Taso_3". Nyt sinulla on suunnitelman pohja valmiina.
 
 ## **Editointi relaatioita hyödyntämällä**
 
