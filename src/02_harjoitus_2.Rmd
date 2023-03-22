@@ -58,7 +58,7 @@ Aiemmin QGIS loi usein uuden tason, kun sille tehtiin jokin geoprosessoinnin ope
 
 ![](img/harjoitus_2/image8.png)
 
-Toiminto löytyy **Prosessointityökalut**-paneelin ylävalikosta. 
+Toiminto löytyy **Prosessointityökalut**-paneelin ylävalikosta.
 
 Toiminto on käytössä vain sellaisille prosessointityökaluille, joissa kohteen geometriatyyppi ei muutu.
 
