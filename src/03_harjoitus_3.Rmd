@@ -49,7 +49,7 @@ Valitse **Ruudukon laajuus -kohdassa ... \> Valitse laajuus piirtoalueelta**, jo
 Jätä **tyhjäksi tallennussijainti** kohta, jolloin tiedosto tallentuu väliaikaiseksi tiedostoksi nimellä **Ruudukko**. Kun klikkaat **Suorita**, QGIS luo heksagoniruudukon valitsemallesi alueelle.
 
 ![](img/harjoitus_3/image5.png)
-Kun ruudukko on luotu, valikoimme siitä vain Loppi-polygonin kohdalle osuvat ruudut. Tämä tehdään **Prosessointityökalut-paneelista Vektoritiedosta poiminta \> Irrota sijainnin perusteella -työkalulla**. Tee valinta äsken luodusta väliaikaisesta-tasosta **Ruudukko** ja valitse ne kohteet, jotka leikkaavat. Valitse tallennussijainniksi **Loppi.gpkg** ja anna tason nimeksi **Loppi_ruudukko** ja klikkaa **Suorita**.
+Kun ruudukko on luotu, valikoimme siitä vain Loppi-polygonin kohdalle osuvat ruudut. Tämä tehdään **Prosessointityökalut-paneelista Vektoritiedosta poiminta \> Irrota sijainnin perusteella -työkalulla**. Valitse Irrota tasolta kohtaan äsken luotu väliaikainen-tasosta **Ruudukko** ja valitse ne kohteet, jotka leikkaavat. Valitse tallennussijainniksi **Loppi.gpkg** ja anna tason nimeksi **Loppi_ruudukko** ja klikkaa **Suorita**.
 
 ![](img/harjoitus_3/image6.png)
 
