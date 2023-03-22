@@ -38,9 +38,9 @@ Usein ensimmäinen operaatio aineistojen luomisessa on taustakartan lisääminen
 
 ![](img/harjoitus_1/image3.png)
 
-Zoomaa kartta Suomen kohdalle ja koska haluamme tehdä tarkkaa editointia oikeassa koordinaattijärjestelmässä, muutetaan projektin koordinaattijärjestelmä Suomen kansalliseen **EUREF-FIN 3067**. Klikkaa projektin oikeasta alakulmasta, jossa lukee tällä hetkellä EPSG:3857, jonka QGIS on asettanut taustakartan perusteella. 
+Zoomaa kartta Suomen kohdalle ja koska haluamme tehdä tarkkaa editointia oikeassa koordinaattijärjestelmässä, muutetaan projektin koordinaattijärjestelmä Suomen kansalliseen **EUREF-FIN 3067**. Klikkaa projektin oikeasta alakulmasta, jossa lukee tällä hetkellä EPSG:3857, jonka QGIS on asettanut taustakartan perusteella.
 
-Paina tämän jälkeen **OK,** jonka jälkeen avautuva ikkuna kysyy sinulta koordinaattimuunnoksesta. Valitse uudestaan **OK** ja nyt projektisi on oikeassa koordinaattijärjestelmässä.  
+Paina tämän jälkeen **OK,** jonka jälkeen avautuva ikkuna kysyy sinulta koordinaattimuunnoksesta. Valitse uudestaan **OK** ja nyt projektisi on oikeassa koordinaattijärjestelmässä.
 
 ## **GeoPackagen luonti**
 

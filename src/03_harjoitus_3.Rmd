@@ -80,7 +80,7 @@ Käytännössä saat siis oikeat arvot kenttiin kirjoittamatta niitä manuaalise
 
 ## **Relaatioiden sisäiset säännöt**
 
-Asetetaan nyt säännöt, jonka mukaan relaatiot riippuvat lomakkeen täytössä tehdyistä valinnoista. Mene uudestaan tason **Attribuuttilomakkeeseen** ja valitsemaasi tason ominaisuuskenttään (Taso_1, Taso_2 tai Taso_3). SyötäTaso_2 -kentän **Suodatinlauseke-kenttään** seuraava lauseke:
+Asetetaan nyt säännöt, jonka mukaan relaatiot riippuvat lomakkeen täytössä tehdyistä valinnoista. Mene uudestaan tason **Attribuuttilomakkeeseen** ja valitsemaasi tason ominaisuuskenttään (Taso_1, Taso_2 tai Taso_3). Syötä Taso_2 -kentän **Suodatinlauseke-kenttään** seuraava lauseke:
 
 ::: code-box
 left("koodi",1)=current_value('Taso_1')
