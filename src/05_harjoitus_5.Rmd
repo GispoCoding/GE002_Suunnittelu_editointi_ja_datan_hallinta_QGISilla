@@ -12,13 +12,13 @@ Opiskelija ymmärtää mihin geokoodaus perustuu ja osaa valita omaan käyttöö
 
 20 minuuttia.
 
-## **Valmistautuminen**
+## Valmistautuminen
 
 Avaa uusi QGIS-projekti (Projekti \> Uusi) ja tallenna se nimellä \"QGIS-harjoitus 5\".
 
 Avaa projektiisi jokin taustakartta, esimerkiksi OpenStreetMap. Löydät sen **Selain**-ikkunan alareunasta XYZ Tiles -valikosta.
 
-## **GeoCoding -lisäosa**
+## GeoCoding -lisäosa
 
 Avaa **Lisäosat** -valikko ja etsi **GeoCoding** -niminen lisäosa. Tutustu sen esittelytekstiin: se voi hyödyntää sekä Googlen että OpenStreetMapin osoitetietoja ja niiden omia hakupalveluita. Asenna lisäosa.
 
@@ -36,7 +36,7 @@ Löydetyistä osoitteista syntyy uusi tilapäinen tulostaso projektiisi.
 
 Avaa nyt **GeoCoding-lisäosan** asetukset ja tutustu sen toimintaan. Se hyödyntää kerralla vain yhtä geokoodauspalvelua. Voit myös valita, mihin mittakaavaan kartta zoomautuu onnistuneen haun jälkeen. Vaihda Geocoding Engine toiseen vaihtoehtoon ja kokeile äsken tekemääsi hakua uudestaan. Ovatko tulokset samanlaiset? Uuden haun tulokset lisätään automaattisesti jo olemassa olevaan tulostasoon. Kuten huomaat, **GeoCoding-lisäosaan** voi syöttää vain yhden osoitteen kerrallaan, ja työkalu täytyy avata joka kerta uudelleen. Entä, jos geokoodattavana on pitkä lista osoitteita, esimerkiksi jonkin suuren yrityksen tai organisaation toimipisteet?
 
-## **DigiTransit.fi Geocoder**
+## DigiTransit.fi Geocoder
 
 Gispon kehittämä **DigiTransit.fi Geocoder -lisäosa** hyödyntää mm. HSL:n Reittioppaan taustalla olevan DigiTransitin geokoodausta. Se käyttää kolmea osoitetietolähdettä: OpenStreetMap, Maastotietokanta ja Väestörekisterikeskus. Lisäksi siihen voi ladata listan osoitteista csv-tekstitiedostona. Osoitetietolähteidensä vuoksi lisäosa toimii vain suomalaisilla osoitteilla. Lisäosa kuuluu QGISin viralliseen lisäosien kirjastoon, joten voit etsiä ja asentaa sen samaan tapaan kuin edellisen lisäosan.
 

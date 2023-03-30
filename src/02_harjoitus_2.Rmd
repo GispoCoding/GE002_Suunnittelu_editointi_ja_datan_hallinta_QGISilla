@@ -12,7 +12,7 @@ Harjoituksen jälkeen opiskelija osaa hyödyntää monipuolisemmin editoinnin om
 
 45 minuuttia.
 
-## **Valmistautuminen**
+## Valmistautuminen
 
 Avaa uusi QGIS-projekti (**Projekti \> Uusi**) ja tallenna se nimellä "**QGIS-harjoitus 2**". Lisää projektiin seuraavat aineistot:
 
@@ -20,7 +20,7 @@ Avaa uusi QGIS-projekti (**Projekti \> Uusi**) ja tallenna se nimellä "**QGIS-h
 
 -   **OpenStreetMap**
 
-## **Kohteisiin tarttuminen (snapping) ja rakennustila (construction mode)**
+## Kohteisiin tarttuminen (snapping) ja rakennustila (construction mode)
 
 Tässä harjoitukksessa teemme rakennuksia rakennuspaikoille. Luo **Aluesuunnitelma-GeoPackageen** uusi taso rakennuksia varten seuraavasti:
 
@@ -58,7 +58,7 @@ Valinnat järjestyksessä vasemmalta oikealle:
 
 -   Self snapping (tarttuminen työn alla olevaan digitoitavaan kohteeseen)
 
-## **Rakentamistila**
+## Rakentamistila
 
 Jos piirtämisen apuna tarvitaan etäisyyttä tietystä pisteestä tai tiettyä kulmaa johonkin olemassa olevaan linjaan, rakentamistilan avulla saa näkyville apuviivoja piirtämisen tueksi. Rakentamistilan ollessa aktiivisena ei voi piirtää, mutta sen avulla voidaan hakea näkyviin tarvittavia apuviivoja esim. etäisyyden tai kulman suhteen. Rakentamistilaa voi käyttää ennen tai kesken piirtämisen.
 
@@ -66,11 +66,11 @@ Rakentamistila aktivoidaan laajennetun digitoinnin paneelista löytyvästä ![](
 
 Huom! Rakentamistilassa ollessa ei piirretä mitään. Kun olet saanut rakentamistilassa toivotut apuviivat näkyville ja haluat aloittaa varsinaisen piirtämisen, rakentamistila tulee sulkea joko painamalla hiirellä ![](img/harjoitus_2/image19.png) tai **C**-näppäimellä. Apuviivat jäävät näkyviin ja voit piirtää niiden avulla pisteen haluamaasi paikkaan.
 
-## **Rakennuksen piirto apuviivojen avulla**
+## Rakennuksen piirto apuviivojen avulla
 
 Lisätyökalujen avulla voi saada näkyville apuviivat ja tarttumisasetukset tiettyihin kulmiin, esimerkiksi 45 tai 90 asteen välein. Toiminnon saa päälle laajennetun digitoinnin paneelista (ikkunan vasemmassa laidassa) ![](img/harjoitus_2/snap_common_angles.png)-nappulasta. Oletuksena nollakulma on vaakatasossa piirtoalueen suhteen, mutta piirtämisen alettua kulma lasketaan viimeisen piirretyn viivan mukaan ja näkyviin tulee tukiviivoja haluttujen kulmien kohdalle.
 
-### **Sitten vain harjoittelemaan....**
+### Sitten vain harjoittelemaan....
 
 Aseta **Rakennukset-tason** editointi päälle kynäkuvakkeesta. Kun valitset **Lisää polygonikohde -työkalun**, **Laajennettu digitointi -kuvake** aktivoituu ![](img/harjoitus_2/image15.png). Klikkaa kuvaketta niin saat **Laajennettu digitointi -hallintapaneeliin** QGISiin.
 
@@ -106,7 +106,7 @@ Aloita nyt **Rakennukset-tason** editointi.
 
 -   Jatka piirtämistä haluamallasi tavalla. Kohtisuoruutta ja yhdensuuntaisuutta voi käyttää piirtämisen aikana toistamalla askelia
 
-## **Suorakulmaisen polygonin piirtäminen**
+## Suorakulmaisen polygonin piirtäminen
 
 1.  Laita tarttumisen työkalu (työtilan yläosassa) päälle **self-snapping** ![](img/harjoitus_2/image13.png).
 
@@ -124,7 +124,7 @@ Aloita nyt **Rakennukset-tason** editointi.
 
 ![](img/harjoitus_2/Suorakulmaisen_polygonin_piirt%C3%A4minen.gif)
 
-## **Tehtävä: "Rakennus 35×40 m tontin rajan suuntaisesti, etäisyys rajaan 15 m"**
+## Tehtävä: "Rakennus 35×40 m tontin rajan suuntaisesti, etäisyys rajaan 15 m"
 
 Piirretään uusi kohde tietylle etäisyydelle ja tietyssä kulmassa halutusta pisteestä tai linjasta. Esimerkiksi jos halutaan piirtää 15 metrin etäisyydelle tontin reunasta suorakulmainen rakennus, jonka kukin sivu on 30 metriä, sen voi tehdä laajennetun digitoinnin työkaluja hyödyntäen mm. seuraavasti:
 
@@ -160,7 +160,7 @@ Tämän jälkeen digitoi aineistoon rakennuksia vähintään kolme kappaletta hy
 
 Ota lopuksi tason editointi pois päältä ja tallenna tasoon tehdyt muutokset.
 
-## **Case rakennusala tontille: polygonin kopiointi toiseksi itseään pienemmäksi**
+## Case rakennusala tontille: polygonin kopiointi toiseksi itseään pienemmäksi
 
 1.  Lisää **MML_Kiinteistörekisteri_03-2023_L4141H_palsta.mif** taso (jatkossa "lähtötaso").
 
@@ -202,7 +202,7 @@ Olemme julkaisseet blogin myös liittyen [CAD-aineistojen käsittelyyn QGISissä
 
     ![](img/harjoitus_2/Attribuuttilomake.png)![](img/harjoitus_2/Lauseke.png){width="519"}
 
-## **Lopuksi**
+## Lopuksi
 
 Avaa **Kuvaustekniikka-paneeli** tai mene tason ominaisuuksien kautta **Kuvaustekniikka-välilehdelle** ja muokkaa editoitujen kohteiden värit vastaamaan taustakartan värejä **Värin valitsin -työkalua** hyödyntäen.
 

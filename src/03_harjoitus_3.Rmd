@@ -12,7 +12,7 @@ Harjoituksen jälkeen osallistuja osaa hyödyntää tehokkaasti QGISin Attribute
 
 30 minuuttia.
 
-## **Valmistautuminen**
+## Valmistautuminen
 
 Avaa uusi QGIS-projekti (**Projekti \> Uusi**) ja tallenna se nimellä "**QGIS-harjoitus 3**". Lisää projektiin seuraavat aineistot:
 
@@ -22,7 +22,7 @@ Avaa uusi QGIS-projekti (**Projekti \> Uusi**) ja tallenna se nimellä "**QGIS-h
 
 -   **Loppi.gpkg**
 
-## **Aineistojen valmistelu**
+## Aineistojen valmistelu
 
 GeoPackage-tietokantaan voi lisätä myös tasoja/tiedostoja/aineistoja, jotka eivät sisällä lainkaan geometrioita -- käytännössä QGISiin avautuu silloin kuinkin kohteen attribuuttitaulut. Projektiin avatut **Luokat-GeoPackagen** sisältämät tasot ovat juuri tällaisia aineistoja, joilla ei ole geometriaa. **Luokat-aineisto** sisältää kolmiportaisen maankäyttöluokitusjärjestelmän, joka perustuu [SLICES](https://www.stat.fi/meta/luokitukset/maankaytto/001-2000-05-01/kuvaus.html)-luokitukseen. Avaa kunkin tason attribuuttitaulut ja tarkastele niiden sisältöä.
 
@@ -60,7 +60,7 @@ Seuraavaksi lisäämme tasoon uudet attribuuttitietokentät, jotka kertovat kyse
 
 Lisää samalla tavalla myös kentät "Taso_2" ja "Taso_3". Nyt sinulla on suunnitelman pohja valmiina.
 
-## **Editointi relaatioita hyödyntämällä**
+## Editointi relaatioita hyödyntämällä
 
 Lähdetään tutkimaan luodun tason **attribuuttilomaketta**. Klikkaa tason päällä hiiren oikeaa painiketta ja valitse **Ominaisuudet... \> Attribuuttilomake**. Tehdään ensin muista kuin kolmesta luomastamme kentästä sellaisia, ettei niitä pysty muokkaamaan. Tämä tehdään poistamalla rasti **Muokattava-kohdasta**.
 
@@ -78,7 +78,7 @@ Valitse nyt kartalta useampi ruutu ja klikkaa sitten **Muokkaa samalla kaikkien 
 
 Käytännössä saat siis oikeat arvot kenttiin kirjoittamatta niitä manuaalisesti. Kuitenkin tässä tapauksessa käyttäjän on vielä mahdollista tehdä ns. vääriä valintoja, eli on mahdollista että valitset ylemmästä luokasta jonkun, joka ei vastaa alemman luokan määrityksiä. Valitse kuitenkin kaikille valituille ruuduille jokin pääluokka.
 
-## **Relaatioiden sisäiset säännöt**
+## Relaatioiden sisäiset säännöt
 
 Asetetaan nyt säännöt, jonka mukaan relaatiot riippuvat lomakkeen täytössä tehdyistä valinnoista. Mene uudestaan tason **Attribuuttilomakkeeseen** ja valitsemaasi tason ominaisuuskenttään (Taso_1, Taso_2 tai Taso_3). Syötä Taso_2 -kentän **Suodatinlauseke-kenttään** seuraava lauseke:
 
@@ -92,7 +92,7 @@ Käytännössä tämä määrittää rajoituksen, jonka mukaan lomakkeella näyt
 
 ![](img/harjoitus_3/image18.png)
 
-## **Lisätehtävä: automaattisesti täydentyvät arvot**
+## Lisätehtävä: automaattisesti täydentyvät arvot
 
 **Attribuuttilomake**-välilehden avulla voit myös asettaa lausekkeita, joiden avulla kenttien arvot täydentyvät automaattisesti. Lauseke annetaan välilehden alaosan **Oletusarvo** -kohdassa.
 
