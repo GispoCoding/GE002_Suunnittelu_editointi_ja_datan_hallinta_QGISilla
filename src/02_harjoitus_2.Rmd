@@ -116,7 +116,7 @@ Aloita nyt **Rakennukset-tason** editointi.
 
 4.  Kolmannen pisteen piirtämistä helpottamaan näkyville tulee apuviiva kohtisuoraan jo piirrettyyn viivaan. Piirrä tämän avulla kolmas piste haluttuun kohtaan.
 
-5.  Hae seuraava kohtisuora apuviiva näkyviin liikuttamalla hiirtä kohti neljättä pistettä, mutta ÄLÄ paina hiiren nappulaa. Kun apuviiva on näkyvissä ja laajennetun digitoinnin paneelissa näkyy kulman arvona 90 astetta paina **CTRL+ A** lukitaksesi kulman arvo. ÄLÄ klikkaa kolmatta pistettä kartalle.
+5.  Hae seuraava kohtisuora apuviiva näkyviin liikuttamalla hiirtä kohti neljättä pistettä, mutta ÄLÄ paina hiiren nappulaa. Kun apuviiva on näkyvissä ja laajennetun digitoinnin paneelissa näkyy kulman arvona 90 astetta paina **CTRL+ A** lukitaksesi kulman arvo. ÄLÄ klikkaa neljättä pistettä kartalle.
 
 6.  Vie hiiri suorakulmion aloituspisteeseen ja kun osoitin tarttuu pisteeseen, **klikkaa sitä hiirellä**. 
 
