@@ -152,7 +152,7 @@ Piirretään uusi kohde tietylle etäisyydelle ja tietyssä kulmassa halutusta p
 
 12. Toista kohta 9.
 
-13. Paina lopuksi hiiren oikeaa näppäintä, jolloin alue sulkeutuu. Rakennus on valmis.
+13. Paina lopuksi hiiren oikeaa näppäintä, jolloin alue sulkeutuu. Näin rakennus on valmis.
 
 ![*Rakennuksen piirtäminen käyttämällä aluksi rakennustilaa apuna etäisyyden määrittämiseen alueen rajasta. Tämän jälkeen rakennuksen mitat annetaan painamalla D ja antamalla seinän mitta, jolloin piirtämisen avuksi tulee ympyrä annetun etäisyyden säteellä.*](img/harjoitus_2/Rakennus_tontin_rajan_suuntaisesti.gif)
 
