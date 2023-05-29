@@ -16,7 +16,7 @@
 
 <meta name="author" content="Gispo Oy." />
 
-<meta name="date" content="2023-05-25" />
+<meta name="date" content="2023-05-29" />
 
 
 <meta name="description" content="5 Harjoitus 4: Topologia ja geometria | Suunnittelu, editointi ja datan hallinta QGISillä">
@@ -95,13 +95,16 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#lisätehtävä-lisää-rakennukset-tasolle-funktio-jolla-pinta-ala-tieto-päivittyy-automaattisesti"><span class="toc-section-number">3.8</span> Lisätehtävä: Lisää Rakennukset tasolle funktio, jolla pinta-ala tieto päivittyy automaattisesti</a></li>
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#lopuksi"><span class="toc-section-number">3.9</span> Lopuksi</a></li>
 </ul></li>
-<li><a href="4-harjoitus-3-relaatiot.html#harjoitus-3-relaatiot"><span class="toc-section-number">4</span> Harjoitus 3: Relaatiot</a>
+<li><a href="4-harjoitus-3-georeferointi.html#harjoitus-3-georeferointi"><span class="toc-section-number">4</span> Harjoitus 3: Georeferointi</a>
 <ul>
-<li><a href="4-harjoitus-3-relaatiot.html#valmistautuminen-2"><span class="toc-section-number">4.1</span> Valmistautuminen</a></li>
-<li><a href="4-harjoitus-3-relaatiot.html#aineistojen-valmistelu"><span class="toc-section-number">4.2</span> Aineistojen valmistelu</a></li>
-<li><a href="4-harjoitus-3-relaatiot.html#editointi-relaatioita-hyödyntämällä"><span class="toc-section-number">4.3</span> Editointi relaatioita hyödyntämällä</a></li>
-<li><a href="4-harjoitus-3-relaatiot.html#relaatioiden-sisäiset-säännöt"><span class="toc-section-number">4.4</span> Relaatioiden sisäiset säännöt</a></li>
-<li><a href="4-harjoitus-3-relaatiot.html#lisätehtävä-automaattisesti-täydentyvät-arvot"><span class="toc-section-number">4.5</span> Lisätehtävä: automaattisesti täydentyvät arvot</a></li>
+<li><a href="4-harjoitus-3-georeferointi.html#valmistautuminen-2"><span class="toc-section-number">4.1</span> Valmistautuminen</a>
+<ul>
+<li><a href="4-harjoitus-3-georeferointi.html#section"><span class="toc-section-number">4.1.1</span> </a></li>
+</ul></li>
+<li><a href="4-harjoitus-3-georeferointi.html#aineistojen-valmistelu---georeferoija-lisäosan-aktivointi"><span class="toc-section-number">4.2</span> Aineistojen valmistelu <strong>-</strong> Georeferoija lisäosan aktivointi</a></li>
+<li><a href="4-harjoitus-3-georeferointi.html#georeferoija-lisäosan-toiminta"><span class="toc-section-number">4.3</span> Georeferoija-lisäosan toiminta</a></li>
+<li><a href="4-harjoitus-3-georeferointi.html#panosta-vastinpisteisiin"><span class="toc-section-number">4.4</span> Panosta vastinpisteisiin</a></li>
+<li><a href="4-harjoitus-3-georeferointi.html#vastinpisteiden-tarkastelu-ja-varsinainen-georeferointi"><span class="toc-section-number">4.5</span> Vastinpisteiden tarkastelu ja varsinainen georeferointi</a></li>
 </ul></li>
 <li><a href="5-harjoitus-4-topologia-ja-geometria.html#harjoitus-4-topologia-ja-geometria"><span class="toc-section-number">5</span> Harjoitus 4: Topologia ja geometria</a>
 <ul>
@@ -116,7 +119,11 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <ul>
 <li><a href="6-harjoitus-5-geokoodaus.html#valmistautuminen-4"><span class="toc-section-number">6.1</span> Valmistautuminen</a></li>
 <li><a href="6-harjoitus-5-geokoodaus.html#geocoding--lisäosa"><span class="toc-section-number">6.2</span> GeoCoding -lisäosa</a></li>
-<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi-geocoder"><span class="toc-section-number">6.3</span> DigiTransit.fi Geocoder</a></li>
+<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi-geocoder"><span class="toc-section-number">6.3</span> DigiTransit.fi Geocoder</a>
+<ul>
+<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi---alkuvalmistelut"><span class="toc-section-number">6.3.1</span> DigiTransit.fi - alkuvalmistelut</a></li>
+<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi---geocoder-aktivointi"><span class="toc-section-number">6.3.2</span> DigiTransit.fi - Geocoder aktivointi</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -200,7 +207,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 </div>
 </div>
 <p style="text-align: center;">
-<a href="4-harjoitus-3-relaatiot.html"><button class="btn btn-default">Previous</button></a>
+<a href="4-harjoitus-3-georeferointi.html"><button class="btn btn-default">Previous</button></a>
 <a href="6-harjoitus-5-geokoodaus.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
@@ -212,7 +219,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 
 <div class="footer-info">
 <h5 class="footer-title">Suunnittelu, editointi ja datan hallinta QGISillä</h5>
-<span class="footer-version">v2023-05-25</span>
+<span class="footer-version">v2023-05-29</span>
 <div class="license"><img src="img/by-nd.svg" width="80px" alt="CC-BY-ND"></div>
 </div>
 

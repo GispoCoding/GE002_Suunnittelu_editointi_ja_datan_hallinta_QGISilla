@@ -16,7 +16,7 @@
 
 <meta name="author" content="Gispo Oy." />
 
-<meta name="date" content="2023-05-25" />
+<meta name="date" content="2023-05-29" />
 
 
 <meta name="description" content="3 Harjoitus 2: Edistyneet digitointiominaisuudet | Suunnittelu, editointi ja datan hallinta QGISillä">
@@ -95,13 +95,16 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#lisätehtävä-lisää-rakennukset-tasolle-funktio-jolla-pinta-ala-tieto-päivittyy-automaattisesti"><span class="toc-section-number">3.8</span> Lisätehtävä: Lisää Rakennukset tasolle funktio, jolla pinta-ala tieto päivittyy automaattisesti</a></li>
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#lopuksi"><span class="toc-section-number">3.9</span> Lopuksi</a></li>
 </ul></li>
-<li><a href="4-harjoitus-3-relaatiot.html#harjoitus-3-relaatiot"><span class="toc-section-number">4</span> Harjoitus 3: Relaatiot</a>
+<li><a href="4-harjoitus-3-georeferointi.html#harjoitus-3-georeferointi"><span class="toc-section-number">4</span> Harjoitus 3: Georeferointi</a>
 <ul>
-<li><a href="4-harjoitus-3-relaatiot.html#valmistautuminen-2"><span class="toc-section-number">4.1</span> Valmistautuminen</a></li>
-<li><a href="4-harjoitus-3-relaatiot.html#aineistojen-valmistelu"><span class="toc-section-number">4.2</span> Aineistojen valmistelu</a></li>
-<li><a href="4-harjoitus-3-relaatiot.html#editointi-relaatioita-hyödyntämällä"><span class="toc-section-number">4.3</span> Editointi relaatioita hyödyntämällä</a></li>
-<li><a href="4-harjoitus-3-relaatiot.html#relaatioiden-sisäiset-säännöt"><span class="toc-section-number">4.4</span> Relaatioiden sisäiset säännöt</a></li>
-<li><a href="4-harjoitus-3-relaatiot.html#lisätehtävä-automaattisesti-täydentyvät-arvot"><span class="toc-section-number">4.5</span> Lisätehtävä: automaattisesti täydentyvät arvot</a></li>
+<li><a href="4-harjoitus-3-georeferointi.html#valmistautuminen-2"><span class="toc-section-number">4.1</span> Valmistautuminen</a>
+<ul>
+<li><a href="4-harjoitus-3-georeferointi.html#section"><span class="toc-section-number">4.1.1</span> </a></li>
+</ul></li>
+<li><a href="4-harjoitus-3-georeferointi.html#aineistojen-valmistelu---georeferoija-lisäosan-aktivointi"><span class="toc-section-number">4.2</span> Aineistojen valmistelu <strong>-</strong> Georeferoija lisäosan aktivointi</a></li>
+<li><a href="4-harjoitus-3-georeferointi.html#georeferoija-lisäosan-toiminta"><span class="toc-section-number">4.3</span> Georeferoija-lisäosan toiminta</a></li>
+<li><a href="4-harjoitus-3-georeferointi.html#panosta-vastinpisteisiin"><span class="toc-section-number">4.4</span> Panosta vastinpisteisiin</a></li>
+<li><a href="4-harjoitus-3-georeferointi.html#vastinpisteiden-tarkastelu-ja-varsinainen-georeferointi"><span class="toc-section-number">4.5</span> Vastinpisteiden tarkastelu ja varsinainen georeferointi</a></li>
 </ul></li>
 <li><a href="5-harjoitus-4-topologia-ja-geometria.html#harjoitus-4-topologia-ja-geometria"><span class="toc-section-number">5</span> Harjoitus 4: Topologia ja geometria</a>
 <ul>
@@ -116,7 +119,11 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <ul>
 <li><a href="6-harjoitus-5-geokoodaus.html#valmistautuminen-4"><span class="toc-section-number">6.1</span> Valmistautuminen</a></li>
 <li><a href="6-harjoitus-5-geokoodaus.html#geocoding--lisäosa"><span class="toc-section-number">6.2</span> GeoCoding -lisäosa</a></li>
-<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi-geocoder"><span class="toc-section-number">6.3</span> DigiTransit.fi Geocoder</a></li>
+<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi-geocoder"><span class="toc-section-number">6.3</span> DigiTransit.fi Geocoder</a>
+<ul>
+<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi---alkuvalmistelut"><span class="toc-section-number">6.3.1</span> DigiTransit.fi - alkuvalmistelut</a></li>
+<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi---geocoder-aktivointi"><span class="toc-section-number">6.3.2</span> DigiTransit.fi - Geocoder aktivointi</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </div>
@@ -221,7 +228,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <h2><span class="header-section-number">3.6</span> Tehtävä: “Rakennus 35×40 m tontin rajan suuntaisesti, etäisyys rajaan 15 m”</h2>
 <p>Piirretään uusi kohde tietylle etäisyydelle ja tietyssä kulmassa halutusta pisteestä tai linjasta. Esimerkiksi jos halutaan piirtää 15 metrin etäisyydelle tontin reunasta suorakulmainen rakennus, jonka kukin sivu on 30 metriä, sen voi tehdä laajennetun digitoinnin työkaluja hyödyntäen mm. seuraavasti:</p>
 <ol style="list-style-type: decimal">
-<li><p>Lisää kurssihakemistostasi kiinteistörajat sisältävä vektoritaso <strong>MML_Kiinteistörekisteri_03-2023_L4141H_kiinteisoraja.mif</strong></p></li>
+<li><p>Lisää kurssihakemistostasi kiinteistörajat sisältävä vektoritaso <strong>MML_kiinteistorekisterikartta_05-2023.gpkg</strong></p></li>
 <li><p>Valitse <strong>Rakennukset</strong> taso aktiiviseksi.</p></li>
 <li><p>Laita <strong>editointi</strong> päälle <img src="img/harjoitus_2/toggle_editing.png" width="26" height="24" /> <strong>Rakennukset</strong>- tasolle,  <strong>monikulmiokohteen piirtäminen päälle</strong> <img src="img/harjoitus_2/monikulmio_kohde.png" /> sekä l<strong>aajennetun digitoinnin työkalut</strong> aktiivisiksi <img src="img/harjoitus_2/image15.png" width="26" height="24" />.</p></li>
 <li><p><strong>Laita laajennetun digitoinnin</strong> paneelista (vasen reuna) <strong>rakentamistila</strong> päälle <img src="img/harjoitus_2/image19.png" /> (tai painamalla <strong>C</strong>).</p></li>
@@ -245,7 +252,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <div id="case-rakennusala-tontille-polygonin-kopiointi-toiseksi-itseään-pienemmäksi" class="section level2" number="3.7">
 <h2><span class="header-section-number">3.7</span> Case rakennusala tontille: polygonin kopiointi toiseksi itseään pienemmäksi</h2>
 <ol style="list-style-type: decimal">
-<li><p>Lisää <strong>MML_Kiinteistörekisteri_03-2023_L4141H_palsta.mif</strong> taso (jatkossa “lähtötaso”).</p></li>
+<li><p>Lisää <strong>MML_kiinteistorekisterikartta_05-2023.gpkg</strong> taso (jatkossa “lähtötaso”).</p></li>
 <li><p>Valitse polygoni/palsta, jonka haluat kopioida <strong>valintatyökalulla</strong> <img src="" /><img src="img/harjoitus_2/valintatyokalu.png" />.</p></li>
 <li><p>Kopioi polygoni leikepöydälle näppäinkomennolla <strong>CTRL+C</strong> tai (tai painamalla hiirellä valikosta <strong>Kopioi kohteet</strong> <img src="img/harjoitus_2/kopioi_kohteet.png" />).</p></li>
 <li><p>Jos haluat luoda kopion eri tasolle kuin millä alkuperäinen polygoni on, valitse kohdetaso tasopaneelista ja laita se <strong>editointitilaan</strong> <img src="img/harjoitus_2/toggle_editing.png" />.</p></li>
@@ -288,7 +295,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 </div>
 <p style="text-align: center;">
 <a href="2-harjoitus-1-digitoinnin-perusteet.html"><button class="btn btn-default">Previous</button></a>
-<a href="4-harjoitus-3-relaatiot.html"><button class="btn btn-default">Next</button></a>
+<a href="4-harjoitus-3-georeferointi.html"><button class="btn btn-default">Next</button></a>
 </p>
 </div>
 </div>
@@ -299,7 +306,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 
 <div class="footer-info">
 <h5 class="footer-title">Suunnittelu, editointi ja datan hallinta QGISillä</h5>
-<span class="footer-version">v2023-05-25</span>
+<span class="footer-version">v2023-05-29</span>
 <div class="license"><img src="img/by-nd.svg" width="80px" alt="CC-BY-ND"></div>
 </div>
 

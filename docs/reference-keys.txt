@@ -22,12 +22,13 @@ tehtävä-rakennus-3540-m-tontin-rajan-suuntaisesti-etäisyys-rajaan-15-m
 case-rakennusala-tontille-polygonin-kopiointi-toiseksi-itseään-pienemmäksi
 lisätehtävä-lisää-rakennukset-tasolle-funktio-jolla-pinta-ala-tieto-päivittyy-automaattisesti
 lopuksi
-harjoitus-3-relaatiot
+harjoitus-3-georeferointi
 valmistautuminen-2
-aineistojen-valmistelu
-editointi-relaatioita-hyödyntämällä
-relaatioiden-sisäiset-säännöt
-lisätehtävä-automaattisesti-täydentyvät-arvot
+section
+aineistojen-valmistelu---georeferoija-lisäosan-aktivointi
+georeferoija-lisäosan-toiminta
+panosta-vastinpisteisiin
+vastinpisteiden-tarkastelu-ja-varsinainen-georeferointi
 harjoitus-4-topologia-ja-geometria
 valmistautuminen-3
 virheellisen-aineiston-tuonti-qgisiin
@@ -39,3 +40,5 @@ harjoitus-5-geokoodaus
 valmistautuminen-4
 geocoding--lisäosa
 digitransit.fi-geocoder
+digitransit.fi---alkuvalmistelut
+digitransit.fi---geocoder-aktivointi
