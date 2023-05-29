@@ -1,122 +1,133 @@
-# Harjoitus 3: Relaatiot
+# Harjoitus 3: Georeferointi
 
 **Harjoituksen sisältö**
 
-Harjoituksessa opetellaan hyödyntämään ulkopuolisia tauluja aineiston editoinnissa.
+Harjoituksessa aktivoidaan Georefereroija-lisäosa ja harjoitellaan georeferointia vastinpisteiden avulla.
 
 **Harjoituksen tavoite**
 
-Harjoituksen jälkeen osallistuja osaa hyödyntää tehokkaasti QGISin Attribute Forms toiminnallisuutta ominaisuustietojen editoinnissa.
+Koulutettava oppii tuomaan kuvatiedoston QGIS-ohjelmaan ja georeferoimaan sen koordinaatistoon
 
 **Arvioitu kesto**
 
-30 minuuttia.
+45 minuuttia.
 
 ## Valmistautuminen
 
-Avaa uusi QGIS-projekti (**Projekti \> Uusi**) ja tallenna se nimellä "**QGIS-harjoitus 3**". Lisää projektiin seuraavat aineistot:
+Avaa uusi QGIS-projekti (**Projekti \> Uusi**) ja tallenna se nimellä "**QGIS-harjoitus 3**".
 
--   **OpenStreetMap**
+QGISin lisäosat tarjoavat käyttöösi suuren valikoiman erilaisia taustakarttoja. Eri rajapinnoista saatavat taustakartat toimivat samaan tapaan kuin projektiin avatut rasteritasot: niiden läpinäkyvyyttä voi säätää, mutta ne eivät sisällä ominaisuustietoja.
 
--   **Luokat.gpkg (luokitus_taso_1, luokitus_taso_2, luokitus_taso_3)**
+Helpoin tapa lisätä OpenStreetMap-kartta on etsiä se Selain-paneelista **XYZ Tiles** -rivin alta ja tuplaklikata sitä:
 
--   **Loppi.gpkg**
+![](img/harjoitus_3/image22.png)
 
-## Aineistojen valmistelu
+Lisää taustakarttoja saat lataamalla Python-skriptin osoitteesta: <https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py>
 
-GeoPackage-tietokantaan voi lisätä myös tasoja/tiedostoja/aineistoja, jotka eivät sisällä lainkaan geometrioita -- käytännössä QGISiin avautuu silloin kuinkin kohteen attribuuttitaulut. Projektiin avatut **Luokat-GeoPackagen** sisältämät tasot ovat juuri tällaisia aineistoja, joilla ei ole geometriaa. **Luokat-aineisto** sisältää kolmiportaisen maankäyttöluokitusjärjestelmän, joka perustuu [SLICES](https://www.stat.fi/meta/luokitukset/maankaytto/001-2000-05-01/kuvaus.html)-luokitukseen. Avaa kunkin tason attribuuttitaulut ja tarkastele niiden sisältöä.
+Toimi siis seuraavasti:
 
-![](img/harjoitus_3/image1.png)
+1\. Kopioi ylläolevan osoitteen koko sisältö
 
-Luokittelu on hierarkinen ja logiikka on helppo ymmärtää:
+2.  Avaa QGISin Python-konsoli (Lisäosat → Python-konsoli)
 
--   Jokaisella maankäyttöluokalla on oma koodinsa, jonka pituus riippuu hierarkian tasosta
+3\. Liitä kopiomasi sisältö avautuneeseen Python-konsoliin \>\>\>-merkkien jälkeiseen laatikkoon
 
--   Jokaisella luokalla on myös sanallinen kuvaus luokasta
+![](img/harjoitus_3/image23.png)
 
-Editoinnin tarkoituksena on hyödyntää ja rajoittaa luokkien välisiä suhteita attribuuttitietojen editoinnissa. Tehdään maankäytön suunnitelma näillä luokituksilla, joka perustuu kuusikulmioihin. Useassa kaupungissa on luotu yleiskaavoja, joissa kerrotaan ruuduittain alueiden käytön suunnittelusta. Harjoituksessa luomme kuvitteellisen yleiskaavan Lopelle Kanta-Hämeeseen heksagonien avulla.
+4\. Paina Enter tai klikkaa \"Suorita komento\" -nappulaa ![](img/harjoitus_3/image24.png){width="35" height="31"}
 
-![](img/harjoitus_3/image2.png)
+Nyt käytössäsi pitäisi olla lisää taustakarttoja selainikkunan XYZ Tiles -kohdassa.
 
-Seuraavaksi luomme koko kunnan alueen kattavan kuusikulmioaineiston. Valitse **Prosessointityökalut-paneelista Vektoritiedon luonti \> Luo ruudukko**. Täytä avautuva Luo ruudukko -ikkunan tiedot seuraavan kuvan mukaisesti:
+### 
+Lisää taustakarttoja - QuickMapServices -lisäosa
 
-![](img/harjoitus_3/image3.png)
+Laajemman valikoiman erilaisia taustakarttoja saat käyttöösi lisäosalla nimeltä **QuickMapServices**. Asenna se yläpalkin Lisäosat-valikosta ja avaa sen jälkeen Verkko-valikosta **Search QMS**. Avautuvasta paneelista voit etsiä erilaisia taustakarttoja ja satelliittikuvia, suodattaa niitä sijaintisi perusteella, ja saada tarvittaessa lisätietoja (esim. käyttöoikeuksista) kartasta. Vihreä pallo kertoo, että kartta on saatavilla. Etsi vaikkapa Stamen-nimellä eri tarkoituksiin sopivia taustakarttoja.
 
-Valitse **Ruudukon laajuus -kohdassa ... \> Valitse laajuus piirtoalueelta**, jonka jälkeen QGIS pyytää sinua valitsemaan kursorilla alueen jolle ruudukko muodostetaan.
+Voit valita taustakartaksi jonkun selkeän kartan, josta saat helposti näkyville tien, rakennukset ja ympäröivän alueen, kuten satelliittikuvan tai OpenStreetMapin. Georeferoitava kohde on Carlanderintiellä Porvoossa. Voit joko etsiä kohteen kartalta tai hyödyntää QGISin hakutoimintoa OSM-kartan kanssa. QGISin alapalkissa vasemmalla on upotettu Etsi-toiminto, johon on sisäänrakennettu esimerkiksi OpenStreetMapin aineistoon perustuva Nominatim Geocoder, jonka avulla voimme etsiä osoitteita.
 
-![](img/harjoitus_3/image4.png)
+![](img/harjoitus_3/image25.png)
 
-Jätä **tyhjäksi tallennussijainti** kohta, jolloin tiedosto tallentuu väliaikaiseksi tiedostoksi nimellä **Ruudukko**. Kun klikkaat **Suorita**, QGIS luo heksagoniruudukon valitsemallesi alueelle.
+Lisää kenttään ensin merkki **\>** ja kirjoita tämän jälkeen osoite **Isonniitynkatu 3** ja tuplaklikkaa esiintulevasta listasta osoitetta. Kartan pitäisi zoomata suoraan valittuun tiekohteeseen.
 
-![](img/harjoitus_3/image5.png)Kun ruudukko on luotu, valikoimme siitä vain Loppi-polygonin kohdalle osuvat ruudut. Tämä tehdään **Prosessointityökalut-paneelista Vektoritiedosta poiminta \> Irrota sijainnin perusteella -työkalulla**. Valitse *Irrota tasolta...* kohtaan äsken luotu väliaikainen taso **Ruudukko** ja valitse ne kohteet, jotka leikkaavat. Valitse tallennussijainniksi **Loppi.gpkg** ja anna tason nimeksi **Loppi_ruudukko** ja klikkaa **Suorita**.
+## Aineistojen valmistelu **-** Georeferoija lisäosan aktivointi
 
-![](img/harjoitus_3/image6.png)
+Georefereroija-lisäosa voi vaatia aktivoinnin. Uusimmissa versioissa (alkaen versiosta 3.28.) lisäosa pitäisi olla aktivoituna valmiiksi, mutta jos käytät vanhempaa QGIS-versiota (3.22), niin QGIS vaatii sisäänrakennetun Georeferencer-lisäosan aktivoinnin georeferointia varten. Lisäosa aktivoidaan Lisäosat-valikon takaa löytyvän **Hallitse ja asenna lisäosia/Manage and Install Plugins** -toiminnon avulla. Tässä ohjeistuksessa oletetaan, että lisäosa on aktivoitu onnistuneesti.
 
-![](img/harjoitus_3/image9.png)
+![Kuva 1. Uudemmissa QGIS-versioissa Georeferoija löytyy- tasot valikosta](img/harjoitus_3/image26_uusi_versio.png)
 
-Seuraavaksi lisäämme tasoon uudet attribuuttitietokentät, jotka kertovat kyseisen tason maankäytöstä. Seuraamme luokituksessa SLICES-luokitusta, jonka luemme toisesta taulusta. Luokittelu on kolmiportainen, joten ensimmäisenä luomme ominaisuustietokentän nimeltä **"Taso_1"** **Loppi_ruudukko-tason** attribuuttitauluun. Avaa ruudukko-tason attribuuttitaulu klikkaamalla **Avaa attribuuttitaulu -kuvaketta** ![](img/harjoitus_3/image10.png) **Ominaisuustietojen työkalupalkista** tai klikkaamalla tasoa hiiren oikealla painikkeella ja valitsemalla **Avaa attribuuttitaulu**. Luo uusi kenttä klikkaamalla **Uusi kenttä -kuvaketta** ![](img/harjoitus_3/image11.png) attribuuttitaulussa.
+![Kuva 2. Vanhemmissa versioissa se löytyy Rasterit- valikosta.](img/harjoitus_3/image26_vanha_versio.png)
 
-![](img/harjoitus_3/image12.png)
+## Georeferoija-lisäosan toiminta
 
-Lisää samalla tavalla myös kentät "Taso_2" ja "Taso_3". Nyt sinulla on suunnitelman pohja valmiina.
+Huomaa, että jos sinulla on PDF-tiedosto, jonka haluat georeferoida, se tulee muuttaa ensin kuvaformaattiin (esim. .JPEG tai .PNG). Tämä onnistuu useimmilla PDF-lukuohjelmilla tai netissä saatavilla olevilla muuntimilla (Googleen PDF to PNG converter).
 
-## Editointi relaatioita hyödyntämällä
+Kun avaat Georeferencer-lisäosan, se avaa erillisen ikkunan, jossa georeferointi toteutetaan. Georeferencer-ikkunaan voidaan avata georeferoitava rasterikuva **Avaa rasteri**... -painikkeesta (kuva 3). Painikkeesta avautuu ikkuna, jonka avulla georeferoitavan kuvan voi valita koneen tiedostojärjestelmästä. Tuettuina on useita kymmeniä eri rasteriformaatteja aina perinteisistä JPEG- ja PNG-formaateista tehokkaisiin JPEG2000- ja ECW-formaatteihin.
 
-Lähdetään tutkimaan luodun tason **attribuuttilomaketta**. Klikkaa tason päällä hiiren oikeaa painiketta ja valitse **Ominaisuudet... \> Attribuuttilomake**. Tehdään ensin muista kuin kolmesta luomastamme kentästä sellaisia, ettei niitä pysty muokkaamaan. Tämä tehdään poistamalla rasti **Muokattava-kohdasta**.
+![Kuva 3. Georeferoitava rasteri avataan Georeferencer-ikkunaan Avaa rasteri -painikkeesta](img/harjoitus_3/image27.png)
 
-![](img/harjoitus_3/image13.png)
+Valitse rasteriksi kurssihakemistosta löytyvä **Tampereen_kaupunki_ilmakuva_Keskusta-1999.png**.Kun haluttu kuva on valittu tiedostojärjestelmästä ja valinta vahvistettu Open-painikkeesta, avautuu käyttäjälle valittu rasteri näkyviin pienen latauksen jälkeen.
 
-Siirry seuraavaksi tehtyjen luokitusten kenttiin. Valitse Taso_1-kentän muokkauksen tyypiksi **Arvojen suhde** ja aseta määritykset seuraavan kuvan mukaisesti:
+Vanhemmissa versioissa tässä kohtaa avautuu käyttäjälle Coordinate Reference System Selector -ikkuna. Tähän ikkunaan syötetään tieto siitä koordinaattijärjestelmästä, johon georeferoitava rasterikuva halutaan saattaa. Tässä esimerkissä käytettäväksi koordinaattijärjestelmäksi valitaan **ETRS89-TM35FIN (EPSG:3067)**, mutta yhtä hyvin koordinaattijärjestelmäksi voidaan valita mikä tahansa QGIS:n tukema koordinaattijärjestelmä.
 
-![](img/harjoitus_3/image14.png)
+Tämän vaiheen jälkeen määritellään georeferoinnissa käytettävät asetukset. Tämä tapahtuu avaamalla **Asetukset**-valikosta **Muunnoksen asetukset** -ikkuna (kuva 4). Saman ikkunan saa avattua myös työkaluriviltä keltaisesta ratassymbolista.
 
-Lisää samalla tavalla myös relaatiot kentille **Taso_2** ja **Taso_3**, mutta muuta **Taso-kohtaan** oikea luokitustaso (2 ja 3). Paina sitten **OK**.
+![Kuva 4. Georeferoinnin asetukset määritellään Asetukset-valikosta löytyvän Muunnoksen asetukset-painikkeen takaa](img/harjoitus_3/image28.png)
 
-Valitse nyt kartalta useampi ruutu ja klikkaa sitten **Muokkaa samalla kaikkien valittujen kohteiden attribuutteja -kuvaketta** ![](img/harjoitus_3/image15.png). Pääset nyt valitsemaan alasvetovalikosta oikeita luokkia näihin ruudukoihin.
+**Muunnoksen asetukset** -ikkunassa määritellään muunnoksessa käytettävät asetukset (kuva 5). Toteutettavan muunnoksen osalta Muunnos parametrit -kohta) valittavissa on muunnoksen tyyppi, interpoloinnissa käytettävä menetelmä ja koordinaattijärjestelmä. Muunnoksessa syntyvän tiedoston osalta ikkunassa voidaan määritellä syntyvän tiedoston nimi, tallennussijainti sekä pakkausmenetelmä.
 
-![](img/harjoitus_3/image16.png)
+Tarkista, että muunnoksen tyyppi on **Lineaarinen**, menetelmä **Nearest Neighbour** ja aseta koordinaattijärjestelmäksi **EPSG:3067**.
 
-Käytännössä saat siis oikeat arvot kenttiin kirjoittamatta niitä manuaalisesti. Kuitenkin tässä tapauksessa käyttäjän on vielä mahdollista tehdä ns. vääriä valintoja, eli on mahdollista että valitset ylemmästä luokasta jonkun, joka ei vastaa alemman luokan määrityksiä. Valitse kuitenkin kaikille valituille ruuduille jokin pääluokka.
+Ikkunassa on täpättävät kohdat (Output Settings -kohta) myös vastinpisteiden (GCP-pisteet) tallentamiseksi, ns. ESRI World -tiedoston luomiseksi varsinaisen georeferoinnin toteuttamisen sijaan ja nolla-arvojen määrittämiseksi läpinäkyviksi. Lisäksi valittavissa on kohta oman vapaavalintaisen spatiaalisen resoluution asettamiseksi muunnoksen yhteydessä luotavalle kuvalle.
 
-## Relaatioiden sisäiset säännöt
+Muunnoksesta on mahdollista saada ulos myös kartta ja raportti (Reports-kohta); näiden tallennuspaikat määritellään tarvittaessa. Varmista myös, että kkunan alareunasta löytyvä \"Avaa tulosrasteri QGISissä kun valmis\" täppä on aktiivisena. Näin saat suoraan valmiin georeferoidun rasterin auki QGISin karttaikkunaan georeferoinnin jälkeen.
 
-Asetetaan nyt säännöt, jonka mukaan relaatiot riippuvat lomakkeen täytössä tehdyistä valinnoista. Mene uudestaan tason **Attribuuttilomakkeeseen** ja valitsemaasi tason ominaisuuskenttään (Taso_1, Taso_2 tai Taso_3). Syötä Taso_2 -kentän **Suodatinlauseke-kenttään** seuraava lauseke:
+![Kuva 5. Muunnoksen asetukset -ikkuna halutuilla asetuksilla (Transformation Settings)](img/harjoitus_3/image29.png)
 
-::: code-box
-left("koodi",1)=current_value('Taso_1')
-:::
+## Panosta vastinpisteisiin
 
-![](img/harjoitus_3/image17.png)
+Kun muunnoksen asetukset on onnistuneesti määritelty, paina asetusikkunasta \"OK\". Nyt voidaan siirtyä määrittelemään vastinpisteitä. Homma lähtee liikkeelle valitsemalla työkaluriviltä löytyvä Add Point -työkalu (kuva 6). Ko. painikkeen vierestä oikealta löytyvät tarvittaessa painikkeet jo määriteltyjen vastinpisteiden poistamiseen ja muokkaamiseen. Lisää piste -painikkeen painaminen aktivoi työkalun, jolla osoitetaan georeferoitavalta kuvalta piste.
 
-Käytännössä tämä määrittää rajoituksen, jonka mukaan lomakkeella näytetään ainoastaan sellaisia kohteita, joiden koodi vastaa ylemmän tason määritystä. Tee samalla logiikalla määritykset tasolle 3, mutta muuta lausekkeen numerot 1 numeroiksi 2. Mene nyt **Loppi_ruudukko-tasolle** ja yritä luoda kokonaan uusi geometria. Jos määritykset toimivat, editointi ei anna nyt käyttäjän syöttää vääriä tietoja!
+![Kuva 6: Georeferointi aloitetaan lisäämällä rasterukuvalle oikaisupisteitä](img/harjoitus_3/image30.png)
 
-![](img/harjoitus_3/image18.png)
+Kun Lisää piste -työkalulla on osoitettu piste georeferoitavalta kuvalta, avautuu Kirjoita karttakoordinaatit (Enter Map Coordinates) -ikkuna (kuva 7). Ikkunaan voi halutessaan syöttää koordinaattitiedot käsin, mutta huomattavasti kätevämpi tapa on poimia ne QGIS-paikkatietosovelluksen pääikkunasta painamalla \"Karttaikkunasta\"-painiketta.
 
-## Lisätehtävä: automaattisesti täydentyvät arvot
+Usean näyttöruudun käsittävä setup helpottaa merkittävästi vastinpisteiden napsuttelua. Mikäli tällaista järjestelyä ei ole käytettävissä (esim. operoitaessa pienellä kannettavan ruudulla), voidaan elämää helpottaa täppäämällä \"Piilota goereferoinnin ikkuna automaattisesti\" -kohta. Tällöin Georeferencer sukeltaa automaattisesti piiloon Karttaikkunasta -painiketta painettaessa.
 
-**Attribuuttilomake**-välilehden avulla voit myös asettaa lausekkeita, joiden avulla kenttien arvot täydentyvät automaattisesti. Lauseke annetaan välilehden alaosan **Oletusarvo** -kohdassa.
+![Kuva 7: Oikaisupisteen tiedot annetaan Kirjoita karttakoodrinaatit -ikkunassa](img/harjoitus_3/image31.png)
 
-![](img/harjoitus_3/image19.png)
+Kun pisteelle on koordinaatit (joko QGIS-pääikkunasta osoittaen tai käsin syöttämällä), nähdään kentissä X / Itä ja Y / Pohjoinen numeroarvoja (kuva 8). Tässä esimerkissä käytetään ETRS89-TM35FIN-koordinaattijärjestelmää (EPSG:3067), jonka koordinaatit ovat kuvassa. Vaihtoehtoisesti voit valita alasvetovalikosta toisen käytettävän koordinaattijärjestelmän (valittava siis samaksi kuin pääkanvaasi näkymässä)
 
-Asetetaan nyt oletusarvot siten, että käyttäjän valitessa suoraan sopivan maankäyttöluokan tasolla 3, tasojen 1 ja 2 arvot täydentyvät automaattisesti vastaaviksi. Huomaa, että jos käytät oletusarvoja, edellisessä tehtävässä tehdyt suodatuslausekeet eivät toimi yhtäaikaisesti oletusarvojen kanssa. Ne on siis ensin poistettava.
+Onnistunut ja laadukas georeferointi vaatii useiden vastinpisteiden määrittelyn. Kuten aiemmin todettiin, vastinpisteiksi kannattaa valita esimerkiksi rakennusten kulmia, kiinteistörajoja ja muita helposti ja yksiselitteisesti tukiaineistosta tulkittavia kohteita. Vastinpisteet kannattaa lisäksi pyrkiä osoittamaan huolellisesti ja tarkasti sekä eri puolille georeferoitavaa kuvaa.
 
-Tasolla 3 ei anneta mitään suodatuslauseketta eikä myöskään oletusarvoa. Tasolle 2 asetetaan oletusarvo-kohtaan lauseke siten, että se poimii Taso_3-kentän nykyisestä arvosta kaksi vasemmanpuoleisinta merkkiä ja kirjoittaa saamansa tuloksen Taso_2 -kenttään.
+Tarkkuus korostuu etenkin silloin, kun vastinpisteitä osoitetaan ainoastaan muutamia. Mitä enemmän vastinpisteitä voidaan osoittaa, sen pienempi on yksittäisestä pisteestä aiheutuva vaikutus muunnokseen.
 
-::: code-box
-left(attribute(\$currentfeature, 'Taso_3'),2)
-:::
+Kun vastinpisteen tiedot ovat Kirjoita karttakoordinaatit -ikkunassa ja oikea koordinaattijärjestelmä valittu, voidaan vastinpiste tallentaa painamalla OK-painiketta. Tällöin vastinpiste tallentuu ns. vastinpistetauluun (GCP-taulu) ja ikkuna sulkeutuu. Uuden pisteet saa lisättyä Lisää piste -painikkeesta.
 
-Ruksi myös **Käytä oletusarvoa päivityksessä** -kohta.
+![Kuva 8: Oikaisupisteen tiedot syötetty](img/harjoitus_3/image32.png)
 
-Vastaavasti Taso_1:n oletusarvoksi asetetaan yhden vasemmanpuoleisimman merkin poiminta Taso_3-kentästä.
+![Kuva 9: Jos huomaat että haluat poistaa jonkun vastinpisteen, voit sen tehdä Poista piste -työkalulla. Aktivoi työkalu ja klikkaa sillä georeferoint-ikkunassa näkyvää pientä punaista pistettä (vastinpiste)](img/harjoitus_3/image33.png)
 
-![](img/harjoitus_3/image20.png)
+![Kuva 10: Poistaminen voidaan tehdä myös muunnospistetaulussa klikkaamalla haluttua riviä hiiren oikealla ja valitsemalla \"Poista\"](img/harjoitus_3/image34.png)
 
-Testaa lausekkeiden toimivuutta editoimalla muutaman kuusikulmion ominaisuustietoja: valitse Taso_3-kentässä haluamasi maanäyttöluokka ja tarkista, että kentät Taso_1 ja Taso_2 päivittyvät. 
+## Vastinpisteiden tarkastelu ja varsinainen georeferointi
 
-![](img/harjoitus_3/image21.png)
+Kun tarvittava määrä vastinpisteitä on syötetty, voidaan niitä tarkastella vastinpistetaulun (GCP-taulu) avulla. Mikäli vastinpistetaulu ei näy automaattisesti Georeferencer-ikkunassa ns. paneelina, voidaan se avata Näytä-valikosta löytyvän Paneelit-valikon alta (kuva 11).
 
-Muita hyödyllisiä käyttötarjoituksia **oletusarvo** -toiminnolle on mm. kohteen editointihetken tallentaminen komennolla **now()** sekä kohteen luojan tai editoijan käyttäjätunnuksen tallentaminen komennolla **user_account_name**.
+![Kuva 11: Syötettyjä oikaisupisteitä ja niiden vastinpisteitä voi tarkastella CGP-taulusta](img/harjoitus_3/image35.png)
+
+Vastinpistetaulussa on nähtävillä kaikki osoitetut vastinpisteet (kuva 10). Tässä esimerkissä on määritelty kymmenen vastinpistettä. Jokaisella vastinpisteelle esitetään taulussa sijainti georeferoitavalla kuvalla (Lähtö X ja Lähtö Y) ja sijainti tukiaineistossa (Kohde. X ja Kohde. Y).
+
+Näiden tietojen lisäksi jokaiselle pisteelle lasketaan virhe X- ja Y-suunnassa. X- ja Y-suuntaisten virhelukujen lisäksi jokaiselle pisteelle on laskettu residuaali, joka kuvaa ko. pisteen kokonaisvirhettä. Ideaalitilanteessa residuaaliarvo olisi mahdollisimman lähellä nollaa.
+
+Huomaa, että virhearvot esitetään pikseleinä. Mikäli jokin vastinpiste eroaa virhearvojen (Residuals/Residuaalit) osalta muista, kannattaa se poistaa ja määritellä uudelleen. Tässä esimerkissä olevat pisteet näyttäisivät olevan hyvin linjassa toistensa kanssa eikä selkeitä poikkeamia esiinny. Voidaan siis edetä hyvillä mielin viimeiseen vaiheeseen, jossa itse georeferointi toteutetaan.
+
+![Kuva 12: GCP-taulussa nähdään kaikki syötetyt vastinpisteet](img/harjoitus_3/image36.png)
+
+Kun tarvittava määrä vastinpisteitä on määritelty ja ne on todettu hyviksi vastinpistetaulua tarkastelemalla, voidaan käynnistää varsinainen georeferointi. Tämä tapahtuu Georeferencer-ikkunan **Start Georeferencing** -painikkeesta (kuva 13).
+
+![Kuva 13: Georeferointi käynnistetään Start Georeferencing -painikkeesta](img/harjoitus_3/image37.png)
+
+Mikäli Muunnoksen asetukset (Transformation Settings) -ikkunassa on laitettu täppä kohtaan \"Load in QGIS when done\", avautuu georeferoitu kuva automaattisesti QGISiin georeferoinnin jälkeen. Mikäli täppää ei ole laitettu, voi kuvan lisätä myös manuaalisesti Open Data Source Manager -toiminnon kautta.
 
 Kun olet valmis, tallenna projektitiedosto kurssihakemistoon pikanäppäimellä **CTRL + T** (englanninkielisessä QGISissä **CTRL + S**) tai päävalikosta **Projekti \> Tallenna**.
 
