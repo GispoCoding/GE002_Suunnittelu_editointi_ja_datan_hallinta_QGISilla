@@ -29,7 +29,7 @@ Tavoitteena on saada kaikki irti QGISin ominaisuuksista erityisesti datan tuotta
 Voit ladata harjoituksissa käytettävän kurssihakemiston tästä linkistä:
 
 ::: note-box
-[Kurssihakemisto.zip](https://drive.google.com/uc?export=download&id=1Npfo-AS-rIJDdy9BS0agm63AolvbjfVC)
+[Kurssihakemisto.zip](https://drive.google.com/uc?export=download&id=1mn5UeGgBxYZ29qG0igVmKanzVpeNEaK5)
 :::
 
 ## Lukuohje
