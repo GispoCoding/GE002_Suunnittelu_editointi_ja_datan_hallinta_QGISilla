@@ -26,7 +26,7 @@ Avaa GeoCoding Lisäosat-valikosta GeoCoding \> GeoCoding.
 
 ![](img/harjoitus_5/image1.png)
 
-Testaa, löytääkö lisäosa esimerkiksi kotiosoitteesi. Mikäli useassa kaupungissa on saman niminen katu, GeoCoding kysyy, minkä niistä haluat näyttää kartalla.
+Testaa löytääkö lisäosa esimerkiksi kotiosoitteesi. Mikäli useassa kaupungissa on saman niminen katu, GeoCoding kysyy, minkä niistä haluat näyttää kartalla.
 
 ![](img/harjoitus_5/image2.png)
 
