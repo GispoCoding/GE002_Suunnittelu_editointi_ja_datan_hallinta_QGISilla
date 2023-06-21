@@ -122,7 +122,7 @@ Aloita nyt **Rakennukset-tason** editointi.
 
 7.  Saadaksesi piirtämisen päätökseen, **klikkaa vielä hiiren oikealla** **näppäimellä.** Suorakulmio on valmis.
 
-![](img/harjoitus_2/Suorakulmaisen_polygonin_piirt%C3%A4minen.gif)
+![](img/harjoitus_2/Suorakulmaisen_polygonin_piirtaminen.gif)
 
 ## Tehtävä: "Rakennus 35×40 m tontin rajan suuntaisesti, etäisyys rajaan 15 m"
 
