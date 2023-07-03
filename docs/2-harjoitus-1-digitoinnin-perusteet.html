@@ -16,15 +16,13 @@
 
 <meta name="author" content="Gispo Oy." />
 
-<meta name="date" content="2023-06-21" />
+<meta name="date" content="2023-07-03" />
 
 
 <meta name="description" content="2 Harjoitus 1: Digitoinnin perusteet | Suunnittelu, editointi ja datan hallinta QGISillä">
 
 <title>2 Harjoitus 1: Digitoinnin perusteet | Suunnittelu, editointi ja datan hallinta QGISillä</title>
 
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 
@@ -63,7 +61,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <nav class="sidebar-nav">
 <div id="TOC" class="toc">
 <ul>
-<li><a href="index.html#suunnittelu-editointi-ja-datan-hallinta-qgisillä"><span class="toc-section-number">1</span> Suunnittelu, editointi ja datan hallinta QGISillä</a>
+<li class="has-sub"><a href="index.html#suunnittelu-editointi-ja-datan-hallinta-qgisillä"><span class="toc-section-number">1</span> Suunnittelu, editointi ja datan hallinta QGISillä</a>
 <ul>
 <li><a href="index.html#tervetuloa-qgis-jatkokurssille"><span class="toc-section-number">1.1</span> Tervetuloa QGIS-jatkokurssille!</a></li>
 <li><a href="index.html#kurssimateriaalien-lataaminen"><span class="toc-section-number">1.2</span> Kurssimateriaalien lataaminen</a></li>
@@ -72,7 +70,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <li><a href="index.html#virheet"><span class="toc-section-number">1.5</span> Virheet</a></li>
 <li><a href="index.html#lisenssi-ja-oikeudet"><span class="toc-section-number">1.6</span> Lisenssi ja oikeudet</a></li>
 </ul></li>
-<li><a href="2-harjoitus-1-digitoinnin-perusteet.html#harjoitus-1-digitoinnin-perusteet"><span class="toc-section-number">2</span> Harjoitus 1: Digitoinnin perusteet</a>
+<li class="has-sub"><a href="2-harjoitus-1-digitoinnin-perusteet.html#harjoitus-1-digitoinnin-perusteet"><span class="toc-section-number">2</span> Harjoitus 1: Digitoinnin perusteet</a>
 <ul>
 <li><a href="2-harjoitus-1-digitoinnin-perusteet.html#valmistautuminen"><span class="toc-section-number">2.1</span> Valmistautuminen</a></li>
 <li><a href="2-harjoitus-1-digitoinnin-perusteet.html#muokkauksen-yleisasetukset"><span class="toc-section-number">2.2</span> Muokkauksen yleisasetukset</a></li>
@@ -80,12 +78,12 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <li><a href="2-harjoitus-1-digitoinnin-perusteet.html#geopackagen-luonti"><span class="toc-section-number">2.4</span> GeoPackagen luonti</a></li>
 <li><a href="2-harjoitus-1-digitoinnin-perusteet.html#aloita-geometrioiden-editointi"><span class="toc-section-number">2.5</span> Aloita geometrioiden editointi</a></li>
 </ul></li>
-<li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#harjoitus-2-edistyneet-digitointiominaisuudet"><span class="toc-section-number">3</span> Harjoitus 2: Edistyneet digitointiominaisuudet</a>
+<li class="has-sub"><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#harjoitus-2-edistyneet-digitointiominaisuudet"><span class="toc-section-number">3</span> Harjoitus 2: Edistyneet digitointiominaisuudet</a>
 <ul>
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#valmistautuminen-1"><span class="toc-section-number">3.1</span> Valmistautuminen</a></li>
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#kohteisiin-tarttuminen-snapping-ja-rakennustila-construction-mode"><span class="toc-section-number">3.2</span> Kohteisiin tarttuminen (snapping) ja rakennustila (construction mode)</a></li>
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#rakentamistila"><span class="toc-section-number">3.3</span> Rakentamistila</a></li>
-<li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#rakennuksen-piirto-apuviivojen-avulla"><span class="toc-section-number">3.4</span> Rakennuksen piirto apuviivojen avulla</a>
+<li class="has-sub"><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#rakennuksen-piirto-apuviivojen-avulla"><span class="toc-section-number">3.4</span> Rakennuksen piirto apuviivojen avulla</a>
 <ul>
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#sitten-vain-harjoittelemaan."><span class="toc-section-number">3.4.1</span> Sitten vain harjoittelemaan….</a></li>
 </ul></li>
@@ -95,9 +93,9 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#lisätehtävä-lisää-rakennukset-tasolle-funktio-jolla-pinta-ala-tieto-päivittyy-automaattisesti"><span class="toc-section-number">3.8</span> Lisätehtävä: Lisää Rakennukset tasolle funktio, jolla pinta-ala tieto päivittyy automaattisesti</a></li>
 <li><a href="3-harjoitus-2-edistyneet-digitointiominaisuudet.html#lopuksi"><span class="toc-section-number">3.9</span> Lopuksi</a></li>
 </ul></li>
-<li><a href="4-harjoitus-3-georeferointi.html#harjoitus-3-georeferointi"><span class="toc-section-number">4</span> Harjoitus 3: Georeferointi</a>
+<li class="has-sub"><a href="4-harjoitus-3-georeferointi.html#harjoitus-3-georeferointi"><span class="toc-section-number">4</span> Harjoitus 3: Georeferointi</a>
 <ul>
-<li><a href="4-harjoitus-3-georeferointi.html#valmistautuminen-2"><span class="toc-section-number">4.1</span> Valmistautuminen</a>
+<li class="has-sub"><a href="4-harjoitus-3-georeferointi.html#valmistautuminen-2"><span class="toc-section-number">4.1</span> Valmistautuminen</a>
 <ul>
 <li><a href="4-harjoitus-3-georeferointi.html#section"><span class="toc-section-number">4.1.1</span> </a></li>
 </ul></li>
@@ -106,7 +104,7 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <li><a href="4-harjoitus-3-georeferointi.html#panosta-vastinpisteisiin"><span class="toc-section-number">4.4</span> Panosta vastinpisteisiin</a></li>
 <li><a href="4-harjoitus-3-georeferointi.html#vastinpisteiden-tarkastelu-ja-varsinainen-georeferointi"><span class="toc-section-number">4.5</span> Vastinpisteiden tarkastelu ja varsinainen georeferointi</a></li>
 </ul></li>
-<li><a href="5-harjoitus-4-topologia-ja-geometria.html#harjoitus-4-topologia-ja-geometria"><span class="toc-section-number">5</span> Harjoitus 4: Topologia ja geometria</a>
+<li class="has-sub"><a href="5-harjoitus-4-topologia-ja-geometria.html#harjoitus-4-topologia-ja-geometria"><span class="toc-section-number">5</span> Harjoitus 4: Topologia ja geometria</a>
 <ul>
 <li><a href="5-harjoitus-4-topologia-ja-geometria.html#valmistautuminen-3"><span class="toc-section-number">5.1</span> Valmistautuminen</a></li>
 <li><a href="5-harjoitus-4-topologia-ja-geometria.html#virheellisen-aineiston-tuonti-qgisiin"><span class="toc-section-number">5.2</span> Virheellisen aineiston tuonti QGISiin</a></li>
@@ -115,11 +113,11 @@ type="button" onclick="navToggle()" aria-label="Toggle navigation">
 <li><a href="5-harjoitus-4-topologia-ja-geometria.html#tarkista-geometriat-geometry-checker"><span class="toc-section-number">5.5</span> Tarkista geometriat (Geometry checker)</a></li>
 <li><a href="5-harjoitus-4-topologia-ja-geometria.html#geometrian-ja-topologian-validointi-tasoa-muokattaessa"><span class="toc-section-number">5.6</span> Geometrian ja topologian validointi tasoa muokattaessa</a></li>
 </ul></li>
-<li><a href="6-harjoitus-5-geokoodaus.html#harjoitus-5-geokoodaus"><span class="toc-section-number">6</span> Harjoitus 5: Geokoodaus</a>
+<li class="has-sub"><a href="6-harjoitus-5-geokoodaus.html#harjoitus-5-geokoodaus"><span class="toc-section-number">6</span> Harjoitus 5: Geokoodaus</a>
 <ul>
 <li><a href="6-harjoitus-5-geokoodaus.html#valmistautuminen-4"><span class="toc-section-number">6.1</span> Valmistautuminen</a></li>
 <li><a href="6-harjoitus-5-geokoodaus.html#geocoding--lisäosa"><span class="toc-section-number">6.2</span> GeoCoding -lisäosa</a></li>
-<li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi-geocoder"><span class="toc-section-number">6.3</span> DigiTransit.fi Geocoder</a>
+<li class="has-sub"><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi-geocoder"><span class="toc-section-number">6.3</span> DigiTransit.fi Geocoder</a>
 <ul>
 <li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi---alkuvalmistelut"><span class="toc-section-number">6.3.1</span> DigiTransit.fi - alkuvalmistelut</a></li>
 <li><a href="6-harjoitus-5-geokoodaus.html#digitransit.fi---geocoder-aktivointi"><span class="toc-section-number">6.3.2</span> DigiTransit.fi - Geocoder aktivointi</a></li>
@@ -205,7 +203,7 @@ Kolmanneksi pitäisi ottaa huomioon, että siirretäänkö kyseistä aineistoa j
 <p><img src="img/harjoitus_1/image8.png" /></p>
 <p>Listaan ilmestyy tuotu <strong>Editointialue-sijaintikirjanmerkki</strong>. Pääset sijaintikirjanmerkin osoittamalle alueelle klikkaamalla <strong>Zoomaa kirjanmerkkiin -painiketta</strong> <img src="img/harjoitus_1/image9.png" />.</p>
 <p><img src="img/harjoitus_1/image10.png" /></p>
-<p>Seuraavaksi aloitamme aineiston muokkaamisen klikkaamalla <strong>Tason muokkaus päälle/pois -painiketta</strong> <img src="img/harjoitus_1/image11.png" />. Huomaa, että <strong>Digitoinnin työkalupalkin</strong> työkalut aktivoituvat. </p>
+<p>Seuraavaksi aloitamme aineiston muokkaamisen klikkaamalla <strong>Tason muokkaus päälle/pois -painiketta</strong> <img src="img/harjoitus_1/image11.png" />. Huomaa, että <strong>Digitoinnin työkalupalkin</strong> työkalut aktivoituvat.</p>
 <p><img src="img/harjoitus_1/image12.png" /></p>
 <p>Valitse työkaluksi <strong>Lisää polygonikohde</strong> ja aloita alueiden digitointi. Hiiren vasemmalla näppäimellä voit klikata kartalla kohteen kulmapisteet. Kun monikulmio on valmis, niin napauta hiiren oikeaa näppäintä, uusi monikulmio on luotu. Digitoi alla olevaa kuvan punaista aluetta vastaava monikulmio.</p>
 <p><img src="img/harjoitus_1/image13.png" /></p>
@@ -249,7 +247,7 @@ Kolmanneksi pitäisi ottaa huomioon, että siirretäänkö kyseistä aineistoa j
 
 <div class="footer-info">
 <h5 class="footer-title">Suunnittelu, editointi ja datan hallinta QGISillä</h5>
-<span class="footer-version">v2023-06-21</span>
+<span class="footer-version">v2023-07-03</span>
 <div class="license"><img src="img/by-nd.svg" width="80px" alt="CC-BY-ND"></div>
 </div>
 
