@@ -92,7 +92,7 @@ Listaan ilmestyy tuotu **Editointialue-sijaintikirjanmerkki**. Pääset sijainti
 
 ![](img/harjoitus_1/image10.png)
 
-Seuraavaksi aloitamme aineiston muokkaamisen klikkaamalla **Tason muokkaus päälle/pois -painiketta** ![](img/harjoitus_1/image11.png). Huomaa, että **Digitoinnin työkalupalkin** työkalut aktivoituvat. 
+Seuraavaksi aloitamme aineiston muokkaamisen klikkaamalla **Tason muokkaus päälle/pois -painiketta** ![](img/harjoitus_1/image11.png). Huomaa, että **Digitoinnin työkalupalkin** työkalut aktivoituvat.
 
 ![](img/harjoitus_1/image12.png)
 
