@@ -1,5 +1,5 @@
-suunnittelu-editointi-ja-datan-hallinta-qgisillä
-tervetuloa-qgis-jatkokurssille
+suunnittelu-ja-editointi-qgisillä
+tervetuloa-syventävälle-qgis-kurssille
 kurssimateriaalien-lataaminen
 lukuohje
 mistä-lisätietoja
