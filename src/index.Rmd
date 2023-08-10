@@ -1,9 +1,9 @@
 ---
-title: "Suunnittelu, editointi ja datan hallinta QGISillä"
+title: "Suunnittelu ja editointi QGISillä"
 author: "Gispo Oy."
 date: "`r Sys.Date()`"
 site: "bookdown::bookdown_site"
-abstract: "Jatkokurssi datan tuottamisesta QGISissä."
+abstract: "Syventäväkurssi datan tuottamisesta QGISissä."
 output:
     bookdown::html_book:
         toc: true
@@ -16,9 +16,9 @@ documentclass: book
 
 <!-- Harjoitukset -->
 
-# Suunnittelu, editointi ja datan hallinta QGISillä
+# Suunnittelu ja editointi QGISillä
 
-## Tervetuloa QGIS-jatkokurssille!
+## Tervetuloa Syventävälle QGIS-kurssille!
 
 Tämän kurssin tarkoituksena on oppia käsittelemään dataa QGISillä tehokkaammin.
 Kurssilla käydään läpi keinoja virheiden välttämiseen ja tehokkaampaan editointiin.
@@ -94,4 +94,4 @@ Jos havaitset materiaalissa virheitä, niin pyydämme ilmoittamaan niistä koulu
 
 ## Lisenssi ja oikeudet
 
-Nämä materiaalit on "Suunnittelu, editointi ja datan hallinta QGISillä"-kurssille kehittänyt Gispo Oy. Materiaalit on lisensoitu seuraavalla lisenssillä: [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)
+Nämä materiaalit on "Suunnittelu ja editointi QGISillä"-kurssille kehittänyt Gispo Oy. Materiaalit on lisensoitu seuraavalla lisenssillä: [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/)
