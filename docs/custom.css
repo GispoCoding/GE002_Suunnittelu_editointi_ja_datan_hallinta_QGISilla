@@ -14,13 +14,13 @@ p, span, li {
 }
 
 a {
-    color: #ab8b9b !important;
+    color: #936287 !important;
     text-decoration: underline !important;
     background-color: transparent;
 }
 
 a:hover {
-    color: #f1c3bb !important;
+    color: #caabbe !important;
     text-decoration: underline;
 }
 
@@ -328,7 +328,6 @@ h5 { font-size: 100% !important; }
 }
 
 .file-content-box p {
-    font-family: 'Inter', sans-serif !important;
     color: #333333;
     margin: 0 !important;
 }
