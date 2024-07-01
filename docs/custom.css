@@ -309,7 +309,7 @@ h5 { font-size: 100% !important; }
 }
 
 .code-box {
-    background: #cccccc;
+    background: #f5d2cc;
     padding: 10px;
     border: none;
     margin-bottom: 1rem;
@@ -328,6 +328,7 @@ h5 { font-size: 100% !important; }
 }
 
 .file-content-box p {
+    font-family: 'Inter', sans-serif !important;
     color: #333333;
     margin: 0 !important;
 }
@@ -340,7 +341,7 @@ h5 { font-size: 100% !important; }
 }
 
 .commandline-box p {
-    color: #fbfbfb;
+    color: #333333;
     margin: 0 !important;
 }
 
