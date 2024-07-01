@@ -285,7 +285,7 @@ h5 { font-size: 100% !important; }
 /* Content boxes */
 
 .hint-box {
-    background: #7a3884;
+    background: #434662;
     padding: 10px;
     border: none;
     margin-bottom: 1rem;
@@ -297,50 +297,50 @@ h5 { font-size: 100% !important; }
 }
 
 .note-box {
-    background: #edc949;
+    background: #ffffff;
     padding: 10px;
     border: none;
     margin-bottom: 1rem;
 }
 
 .note-box p {
-    color: #444444;
+    color: #333333;
     margin: 0 !important;
 }
 
 .code-box {
-    background: #ffe1cd;
+    background: #f5d2cc;
     padding: 10px;
     border: none;
     margin-bottom: 1rem;
 }
 
 .code-box p {
-    color: #444444;
+    color: #333333;
     margin: 0 !important;
 }
 
 .file-content-box {
-    background: #eeeeee;
+    background: #caabbe;
     padding: 10px;
     border: none;
     margin-bottom: 1rem;
 }
 
 .file-content-box p {
-    color: #444444;
+    color: #333333;
     margin: 0 !important;
 }
 
 .commandline-box {
-    background: #ab8b9b;
+    background: #cccccc;
     padding: 10px;
     border: none;
     margin-bottom: 1rem;
 }
 
 .commandline-box p {
-    color: #fbfbfb;
+    color: #333333;
     margin: 0 !important;
 }
 
